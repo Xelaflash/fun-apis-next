@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import SearchInput from './SearchInput';
+// import SearchInput from './SearchInput';
 
 const avatarStyles = [
   'adventurer',
@@ -45,7 +45,7 @@ const Header = () => {
       </Avatar>
       <h1 className="text-2xl font-bold">Fun APIs</h1>
       {/* searchbar */}
-      <SearchInput />
+      {/* <SearchInput /> */}
     </header>
   );
 };

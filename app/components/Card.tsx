@@ -48,7 +48,18 @@ const Card = ({ data, isExpanded, onToggleExpand }: CardProps) => {
       style={{ height: cardHeight }}
     >
       <div className="flex items-center justify-center relative pt-[56.25%]">
-        <Image className="object-contain" src={data.url} fill alt={data.title} />
+        {data.media_type === 'image' && (
+          <Image
+            className="object-contain"
+            src={data.url}
+            fill
+            alt={data.title}
+            sizes="(max-width: 400px) 400px, 100vw"
+          />
+        )}
+        {data.media_type === 'video' && (
+          <iframe src={data.url} title={data.title} allowFullScreen className="absolute top-0 left-0 w-full h-full" />
+        )}
       </div>
       <div className="flex flex-col items-center justify-center pt-4">
         <h2 className="text-2xl font-bold text-center">{data.title}</h2>
