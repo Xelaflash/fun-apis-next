@@ -16,8 +16,6 @@ type CardListProps = {
   initialItems: ApodData[];
 };
 
-// TODO: get search query from context and use it to filter the items => Hightlight using has in css the card that matches the search query
-
 const CardList = ({ initialItems }: CardListProps) => {
   const [scrollTrigger, isInView] = useInView();
   const { searchQuery } = useSearchContext();
